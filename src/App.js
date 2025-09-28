@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import credits from "./data/credits.json";
 import "./App.css";
 
-// Template function to generate certificate HTML
+
 const getCertificateHTML = (credit) => {
   const timestamp = new Date().toLocaleString();
   return `
@@ -64,7 +64,7 @@ function App({ goToLanding }) {
   return (
     <div className="app-shell">
       <header className="topbar">
-        {/* Clickable logo to go to landing page */}
+        {}
         <div
           className="brand"
           style={{ cursor: "pointer" }}
@@ -78,7 +78,7 @@ function App({ goToLanding }) {
         </div>
 
         <nav className="nav-actions">
-          {/* Optional dashboard buttons */}
+          {}
         </nav>
       </header>
 

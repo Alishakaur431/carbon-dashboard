@@ -2,7 +2,7 @@
     --primary: #0b66ff;
   }
   
-  /* Full page background */
+  
   .landing-page {
     height: 100vh;
     width: 100%;
@@ -11,7 +11,7 @@
     flex-direction: column;
   }
   
-  /* Navbar */
+  
   .landing-topbar {
     background: rgba(255, 255, 255, 0.9);
     padding: 18px 28px;
@@ -25,7 +25,7 @@
     color: #081124;
   }
   
-  /* Hero section with overlay */
+  
   .landing-hero {
     flex: 1;
     display: flex;
@@ -34,10 +34,10 @@
     position: relative;
   }
   
-  /* Overlay to make text readable */
+  
   .overlay {
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* slightly transparent */
+    background: rgba(255, 255, 255, 0.8); 
     padding: 40px 30px;
     border-radius: 12px;
     max-width: 400px;
@@ -55,7 +55,7 @@
     font-size: 16px;
   }
   
-  /* Button */
+  
   .landing-btn {
     padding: 14px 28px;
     font-size: 18px;
@@ -74,7 +74,7 @@
     box-shadow: 0 10px 28px rgba(11,102,255,0.16);
   }
   
-  /* Responsive adjustments */
+  
   @media (max-width: 600px) {
     .overlay {
       padding: 30px 20px;

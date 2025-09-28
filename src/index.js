@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App'; // dashboard
+import App from './App'; 
 import LandingPage from './LandingPage';
 import reportWebVitals from './reportWebVitals';
 
 function Root() {
   const [showDashboard, setShowDashboard] = useState(false);
 
-  // Function to switch pages
+  
   const goToLanding = () => setShowDashboard(false);
   const goToDashboard = () => setShowDashboard(true);
 
