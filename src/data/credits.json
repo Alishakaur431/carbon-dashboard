@@ -1,0 +1,33 @@
+[
+    {
+      "unic_id": "CRD-001",
+      "project_name": "Solar Plant X",
+      "vintage": "2022",
+      "status": "Active"
+    },
+    {
+      "unic_id": "CRD-002",
+      "project_name": "Tree Plantation Y",
+      "vintage": "2021",
+      "status": "Retired"
+    },
+    {
+      "unic_id": "CRD-003",
+      "project_name": "Wind Farm Z",
+      "vintage": "2023",
+      "status": "Active"
+    },
+    {
+      "unic_id": "CRD-004",
+      "project_name": "Hydro Plant A",
+      "vintage": "2020",
+      "status": "Active"
+    },
+    {
+      "unic_id": "CRD-005",
+      "project_name": "Forest Protection B",
+      "vintage": "2019",
+      "status": "Retired"
+    }
+  ]
+  

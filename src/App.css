@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+/* Basic reset / font hint */
+:root {
+  --bg: #f6f9fc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --primary: #0b66ff;
+  --accent: #e6f0ff;
+  --success: #10b981;
+  --danger: #6b7280;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* { box-sizing: border-box; }
+body, html, #root { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); color: #0f172a; }
+
+/* Top nav */
+.topbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  background: white;
+  border-bottom: 1px solid #eef2f7;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.brand { display:flex; align-items:center; gap:12px; }
+.logo { width:44px; height:44px; border-radius:8px; display:flex; align-items:center; justify-content:center; background: linear-gradient(180deg,#f0f9ff,#e6f0ff); font-size:20px; }
+.brand-title { font-weight:700; color:#081124; }
+.brand-sub { font-size:12px; color:var(--muted); }
+
+/* Nav actions - HIDDEN */
+.nav-actions { display:none; }
+
+/* Main container */
+.container { max-width:1100px; margin:28px auto; padding: 0 18px; }
+
+/* Hero */
+/* Center hero section */
+/* Hero section */
+.hero {
+  background: transparent;
+  text-align: center;       /* Only centers the text */
+  margin-bottom: 28px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Center the hero text but not the search bar */
+.hero h1,
+.hero-sub {
+  margin: 6px 0;
+}
+
+/* Keep search row full-width */
+.search-row {
   display: flex;
-  flex-direction: column;
+  gap: 12px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 8px;
+  justify-content: center; /* keeps it horizontally centered */
 }
 
-.App-link {
-  color: #61dafb;
+.search-input {
+  flex: 1;                 /* stays full-width */
+  max-width: 600px;        /* optional: prevents too wide on large screens */
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e6eef8;
+  background: white;
+  font-size: 15px;
+  outline: none;
+  transition: box-shadow .18s ease, border-color .18s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stats {
+  color: var(--muted);
+  min-width: 90px;
+  text-align: right;
+  font-weight: 600;
+}
+
+/* Card for table */
+.table-card {
+  background: var(--card);
+  border-radius:12px;
+  padding:8px;
+  box-shadow: 0 8px 24px rgba(8,20,52,0.06);
+  border: 1px solid #eef6ff;
+}
+
+/* Table */
+.credits-table { width:100%; border-collapse:collapse; font-size:15px; }
+.credits-table thead th {
+  text-align:left; padding:14px; font-weight:700; background: linear-gradient(90deg,var(--primary),#0060e8); color:white; border-bottom:0;
+  position: sticky; top:0;
+}
+.credits-table tbody td { padding:14px; border-bottom:1px solid #f3f6fb; vertical-align:middle; }
+.credits-table tbody tr:nth-child(even) { background: #fbfdff; }
+.credits-table tbody tr:hover { background: #f3f8ff; }
+
+/* monospace for UNIC code */
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; color:#0b1220; font-weight:700; }
+
+/* badges */
+.badge { padding:6px 12px; border-radius:999px; font-weight:700; font-size:13px; display:inline-block; }
+.badge-active { background: linear-gradient(180deg,#def7ec,#bbf0d2); color: #065f46; border: 1px solid #bbf0d2; }
+.badge-retired { background: linear-gradient(180deg,#f3f4f6,#e5e7eb); color: #374151; border:1px solid #e5e7eb; }
+
+/* actions */
+.actions-col { text-align:right; white-space:nowrap; }
+.btn-download {
+  padding:8px 12px; border-radius:8px; background: #0b66ff; color:white; border:none; cursor:pointer; font-weight:700;
+  box-shadow: 0 6px 18px rgba(11,102,255,0.12); transition: transform .14s ease, box-shadow .14s ease;
+}
+.btn-download:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(11,102,255,0.16); }
+
+/* footer */
+.footer { margin-top:18px; padding:12px 0; text-align:center; color:var(--muted); font-size:13px; }
+
+/* responsive */
+@media (max-width:800px) {
+  .credits-table thead th { font-size:13px; }
+  .hero h1 { font-size:20px; }
+  .actions-col { text-align:left; }
+  .search-row { flex-direction:column; align-items:stretch; gap:10px; }
 }
